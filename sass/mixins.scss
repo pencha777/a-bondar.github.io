@@ -1,0 +1,49 @@
+//clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// placeholder
+@mixin placeholder($color: #000) {
+  &::-moz-placeholder {
+    color: $color;   // Firefox
+    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder {
+    color: $color; // Internet Explorer 10+
+  }
+  &::-webkit-input-placeholder {
+    color: $color; // Safari and Chrome
+  }
+}
+
+//transition
+@mixin trans {
+  transition: all .4s ease-out 0s;
+}
+
+//media queries
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: $large) {
+      @content;
+    }
+  }
+  @if $point == middle {
+    @media (max-width: $middle) {
+      @content;
+    }
+  }
+  @else if $point == small {
+    @media (max-width: $small) {
+      @content;
+    }
+  }
+}

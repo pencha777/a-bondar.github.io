@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:500,300&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize-minimized.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nerds - Напишите нам</title>
+  </head>
+  <body class="js-off">
+    <form class="modal-write-us" action="/echo"  method="post">
+      <a class="write-us-close" href="index.html"></a>
+      <fieldset class="half-width">
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" name="user-name" type="text" placeholder="Представьтесь, пожалуйста" required="">
+      </fieldset>
+      <fieldset class="half-width">
+        <label for="user-email">Ваш e-mail:</label>
+        <input id="user-email" name="user-email" type="email" placeholder="Для отправки ответа" required="">
+      </fieldset>
+      <fieldset>
+        <label for="user-text">Текст письма:</label>
+        <textarea id="user-text" name="user-text" placeholder="В свободной форме:" required=""></textarea>
+      </fieldset>
+      <div class="write-us-buttons clearfix">
+        <input class="btn btn-red" type="submit" value="Отправить">
+        <input class="btn btn-grey" name="reset" type="reset" value="Отмена">
+      </div>
+    </form>
+  </body>
+  </html>

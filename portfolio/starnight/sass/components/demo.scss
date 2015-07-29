@@ -1,0 +1,38 @@
+.demo {
+  position: relative;
+  margin: 0 0 135px;
+  font-size: 0;
+  text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 455px;
+      background: #ecf0f3;
+    }
+}
+
+.review {
+  display: inline-block;
+  width: 520px;
+  margin: 0 140px 65px 0;
+  vertical-align: top;
+  font: $weight-regular #{$font-size-base}/#{$line-height-base} $font-family-base;
+  color: $text-color;
+  text-align: left;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__title {
+      margin: 0 0 15px;
+      font-size: $font-size--h4;
+      text-transform: uppercase;
+      color: $gray;
+      letter-spacing: 3px;
+    }
+}

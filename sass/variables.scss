@@ -1,0 +1,23 @@
+//colors
+$gray: #888;
+$gray-darker: #777;
+$green: #4acaa8;
+
+//typography
+$text-color: $gray;
+$body-bg: #fff;
+$headings-color: $green;
+
+$font-family-base: "Lato", "Arial", sans-serif;
+
+$font-size-base:          14px ;
+
+$font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
+
+$line-height-base:        1.428571429; // 20/14
+
+//breakpoints
+$small: 480px;
+$middle: 768px;
+$large: 992px;

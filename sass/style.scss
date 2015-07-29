@@ -1,0 +1,19 @@
+//normalize.css
+@import "components/vendor/normalize";
+
+//fonts
+@import "components/vendor/fonts";
+
+//mixins
+@import "mixins";
+
+//var
+@import "variables";
+
+//global
+@import "components/base.scss";
+@import "components/header.scss";
+@import "components/about-me.scss";
+@import "components/skills.scss";
+@import "components/portfolio.scss";
+@import "components/contacts.scss";

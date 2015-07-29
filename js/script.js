@@ -1,15 +1,9 @@
-// вешаем на каждую ссылку обработчик
+var links = document.querySelectorAll(".navigation__link");
 
-	$(".navigation__link").click(function(){
-
-	  // удаляем у старого элемента, класс   activeClass
-
-	  $(".navigation__link--active").removeClass("navigation__link--active");
-
-
-
-	  // добавляем к ссылки по которой щёлкнули класс activeClass
-
-	  $(this).addClass("navigation__link--active");
-
-	});
+//каждой ссылке добавляем addEventListener
+for (i = 0; i < links.length; i++) {
+	links[i].addEventListener("click", function() {
+		document.querySelector(".navigation__link--active").classList.remove("navigation__link--active"); //удаляем класс у активной ссылки
+		this.classList.add("navigation__link--active"); //добавляем класс ссылке, на которую щелкнули
+	})
+};

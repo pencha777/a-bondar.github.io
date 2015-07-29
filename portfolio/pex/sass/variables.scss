@@ -1,0 +1,28 @@
+//font-family
+$font-family-base: "OpenSans", "Arial", sans-serif;
+
+//font-size
+$html-size-base: 10px;
+$font-size-base: 1.5rem;
+$font-size-small: 1.2rem;
+$font-size-h1: 5rem;
+$font-size-h2: 3.5rem;
+$font-size-h3: $font-size-base;
+$font-size-btn: 1.8rem;
+$font-size-btn--small: 1.3rem;
+
+//line-height
+$line-height-base: 1.7333333333;
+
+//colors
+$white: #fff;
+$violet: #8824cd;
+$pink: #e7526b;
+$darkblue: #2e3b4e;
+$darkgray: #3a4d60;
+$text-color: $white;
+
+//media queries
+$middle: 768px;
+$small: 480px;
+$container: 1180;

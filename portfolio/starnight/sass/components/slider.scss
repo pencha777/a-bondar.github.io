@@ -1,0 +1,70 @@
+.slider {
+  position: relative;
+  padding: 135px 0 0;
+  margin: 0 0 100px;
+  background: url("../img/bg-slider.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -25px;
+      width: 40px;
+      height: 25px;
+      margin-left: -17px;
+      background: url("../img/angle.png") no-repeat;
+    }
+}
+
+.owl-carousel {
+  height: 465px;
+  overflow: hidden;
+
+    &__item {
+      height: 100%;
+    }
+
+    &__image {
+      width: 122px;
+      height: 122px;
+      margin: 0 auto 25px;
+      border: 5px solid $white;
+      border-radius: 50%;
+      overflow: hidden;
+
+        img {
+          transform: translateX(-43px);
+        }
+    }
+
+    &__text {
+      font-size: $font-size-owl--text;
+      line-height: $line-height-base + 23;
+      font-weight: $weight-light;
+      font-style: italic;
+      color: $white;
+    }
+}
+
+.owl-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 125px;
+  transform: translateX(-40%);
+  @extend %clearfix;
+
+  .owl-page {
+      float: left;
+      margin-right: 25px;
+      width: 8px;
+      height: 8px;
+      border: 4px solid #FFF;
+      border-radius: 50%;
+
+        &.active {
+          background: $white;
+        }
+  }
+}

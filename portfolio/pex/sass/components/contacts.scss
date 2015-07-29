@@ -1,0 +1,77 @@
+.contacts {
+  padding: 75px 0 90px;
+  background: $pink;
+
+  .inner {
+    @include clearfix;
+  }
+
+  &__info {
+    float: left;
+    width: 400px;
+    font-size: $font-size-base; //ie9-10 fallback
+
+    @include breakpoint(middle) {
+      float: none;
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0 0 135px;
+    line-height: 1.7333;
+
+    @include breakpoint(middle) {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__mailto {
+    color: $white;
+
+    @include trans;
+
+    &:hover {
+      color: lighten($violet, 15%);
+    }
+
+    &:active {
+      color: lighten($violet, 20%);
+    }
+  }
+
+  &__form {
+    float: right;
+    box-sizing: border-box;
+    width: calc-percent(520, $container);
+    font-size: 0;
+
+    @include breakpoint(middle) {
+      float: none;
+      margin: 25px 0 0;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    margin: 0 4% 10px 0;
+    width: 48%;
+  }
+
+  &__mail {
+    width: 48%;
+  }
+
+  &__feed {
+    margin: 0 0 20px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+  }
+}

@@ -1,0 +1,53 @@
+.testimonial {
+  padding: 355px 0 90px;
+  background: url("../img/bg-testimonial.jpg") no-repeat 0 10% / cover;
+
+  @include breakpoint(middle) {
+    padding: 200px 0 90px;
+    background-position: 50% 15%;
+    background-size: auto;
+  }
+
+  &__title {
+    margin: 20px 0 20px;
+    width: 520px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    @include font-size(40px);
+    @include breakpoint(middle) {
+      width: 90%;
+
+      @include font-size(20px);
+    }
+  }
+
+  &__author {
+    position: relative;
+    display: block;
+    max-width: 520px;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: -3px;
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    img {
+      transform: translateX(-30%);
+    }
+  }
+
+  &__sign {
+    margin: 0;
+    padding-left: 60px;
+    line-height: 2.815;
+
+    @include font-size(13px);
+  }
+}

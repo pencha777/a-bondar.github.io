@@ -1,0 +1,800 @@
+/* ==================================================================
+   Иконочный шрифт fontello
+   ================================================================== */
+   @font-face {
+     font-family: "fontello";
+     src: url("../font/fontello.eot?7655851");
+     src: url("../font/fontello.eot?7655851#iefix") format("embedded-opentype"),
+          url("../font/fontello.woff?7655851") format("woff"),
+          url("../font/fontello.ttf?7655851") format("truetype"),
+          url("../font/fontello.svg?7655851#fontello") format("svg");
+     font-weight: normal;
+     font-style: normal;
+   }
+   /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+   /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+   /*
+   @media screen and (-webkit-min-device-pixel-ratio:0) {
+     @font-face {
+       font-family: "fontello";
+       src: url("../font/fontello.svg?7655851#fontello") format("svg");
+     }
+   }
+   */
+
+    [class^="icon-"]::before, [class*=" icon-"]::before {
+     font-family: "fontello";
+     font-style: normal;
+     font-weight: normal;
+     speak: none;
+
+     display: inline-block;
+     text-decoration: inherit;
+     /*width: 1em;*/
+     /*margin-right: .2em;*/
+     text-align: center;
+     /* opacity: .8; */
+
+     /* For safety - reset parent styles, that can break glyph codes*/
+     font-variant: normal;
+     text-transform: none;
+
+     /* fix buttons height, for twitter bootstrap */
+     line-height: 1em;
+
+     /* Animation center compensation - margins should be symmetric */
+     /* remove if not needed */
+     /*margin-left: .2em;*/
+
+     /* you can be more comfortable with increased icons size */
+     /* font-size: 120%; */
+
+     /* Font smoothing. That was taken from TWBS */
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+
+     /* Uncomment for 3D effect */
+     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+   }
+
+   .icon-check:before { content: '\e800'; } /* '' */
+   .icon-cancel:before { content: '\e801'; } /* '' */
+   .icon-group:before { content: '\e802'; } /* '' */
+   .icon-youtube:before { content: '\e803'; } /* '' */
+   .icon-chat:before { content: '\e804'; } /* '' */
+   .icon-quote-left:before { content: '\e805'; } /* '' */
+   .icon-right:before { content: '\e806'; } /* '' */
+   .icon-mail:before { content: '\e807'; } /* '' */
+   .icon-pinterest:before { content: '\e808'; } /* '' */
+   .icon-gplus:before { content: '\e809'; } /* '' */
+   .icon-instagram:before { content: '\e80a'; } /* '' */
+   .icon-linkedin:before { content: '\e80b'; } /* '' */
+   .icon-facebook:before { content: '\e80c'; } /* '' */
+   .icon-twitter:before { content: '\e80d'; } /* '' */
+/* ==================================================================
+   Общие правила
+   ================================================================== */
+body {
+  font: 400 16px/1.5625 "Source Sans Pro", "Arial", sans-serif;
+  color: #727272;
+  min-width: 1170px;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  font: 700 16px/1.875 "Raleway", "Arial", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-blue { background: #008ed6; }
+
+.btn-blue:hover {background: #05a2f1; }
+
+.btn-blue:active,
+.main-navigation a:active,
+.footer-social a:active,
+.contact-us a:active { opacity: .5;}
+
+.logo img,
+.brief-image img,
+.slider-image img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.main-navigation ul,
+.offer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+  position: relative;
+  margin: 0 0 15px;
+  padding: 0 0 25px;
+  font: 500 35px/1 "Raleway", "Arial", sans-serif;
+  text-align: center;
+  color: #323232;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -34px;
+  height: 1px;
+  width: 68px;
+  background: #0199e6;
+}
+
+.subtitle {
+  margin: 0 0 75px;
+  text-align: center;
+}
+
+.row {
+  margin: 0  0 -75px -30px;
+  font-size: 0;
+}
+
+.brief,
+.features,
+.pricing,
+.video,
+.product,
+.testimonials { padding: 100px 0; }
+
+.brief.right,
+.pricing,
+.product,
+.testimonial blockquote,
+.main-footer {  background: #f7f8fa; }
+/* ==================================================================
+   Шапка сайта
+   ================================================================== */
+.main-header {
+  padding: 25px 0;
+  color: #000;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+.logo {
+  width: 101px;
+  height: 28px;
+}
+
+.main-header .logo { float: left; }
+
+.main-navigation {
+  float: right;
+  max-width: 750px;
+}
+
+.main-navigation ul {
+  margin: 0 -25px 0 0;
+  font-size: 0;
+}
+
+.main-navigation li {
+  position: relative;
+  display: inline-block;
+  margin: 0 25px 0 0;
+  font: 700 14px/1.786 "Raleway", "Arial", sans-serif;
+  vertical-align: top;
+}
+
+.main-navigation .active::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  height: 1px;
+  background: #0199e6;
+}
+
+.main-navigation a {
+  color: #000;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.main-navigation .active,
+.main-navigation a:hover { color: #0199e6; }
+
+/* ==================================================================
+   Блок promo
+   ================================================================== */
+.promo {
+  padding: 160px 0 208px;
+  text-align: center;
+  color: #fff;
+  background: #1e272b url("../img/promo-bg.jpg") no-repeat center;
+}
+
+.promo-title {
+  margin: 0 0 40px;
+  font: 500 45px/1 "Raleway", "Arial", sans-serif;
+}
+
+.promo-title strong { color: #0199e6; }
+
+.promo-text {
+  max-width: 680px;
+  margin: 0 auto 70px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.promo .get-started {
+  box-sizing: border-box;
+  width: 945px;
+  margin: 0 auto 20px;
+  padding: 25px 23px 22px 24px;
+  font-size: 0;
+  background: rgba(0,0,0,.5);
+}
+
+.get-started input {
+  box-sizing: border-box;
+  width: 217px;
+  margin: 0 20px 0 0;
+  padding: 10px 0 10px 20px;
+  font: 400 16px/1.875 "Source Sans Pro", "Arial", sans-serif;
+  color: #fff;
+  outline: none;
+  border: #043750 1px solid;
+  border-radius: 2px;
+  box-shadow:  -3px 0 0 0 #0199e6;
+  background: none;
+  transition: .3s;
+}
+
+.get-started input:hover,
+.get-started input:focus { border-color: #0199e6; }
+
+.get-started input::-webkit-input-placeholder{ color: rgba (255,255,255,.5);}
+
+.get-started input::-moz-placeholder { color: rgba (255,255,255,.5); }
+
+.modal-write-us input:-moz-placeholder { color: rgba (255,255,255,.5); }
+
+.get-started .btn-blue {
+  width: 184px;
+  min-height: 52px;
+}
+
+.promo-register {
+  position: relative;
+  max-width: 550px;
+  text-align: right;
+  margin: 0 0 0 295px;
+}
+
+.promo-register strong {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.promo-register::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -45px;
+  display: block;
+  width: 34px;
+  height: 26px;
+  background: url("../img/sprite.png") no-repeat -50px -50px;
+}
+
+/* ==================================================================
+   Блок brief
+   ================================================================== */
+.brief.right .brief-image,
+.brief.left .brief-text { float: right; }
+
+.brief.left .brief-image,
+.brief.right .brief-text { float: left; }
+
+.brief-image {
+  width: 532px;
+  height: 424px;
+}
+
+.brief-text { width: 555px;}
+
+.brief-title {
+  position: relative;
+  padding: 0 0 25px 0;
+  font: 500 35px/1.429 "Raleway", "Arial", sans-serif;
+  color: #323232;
+}
+
+.brief-title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 68px;
+  height: 1px;
+  background: #0199e6;
+}
+
+.brief-descriprion { margin: 20px 0 40px 0; }
+
+.brief-features {
+  position: relative;
+  padding: 0 0 0 50px;
+}
+
+.brief-features::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.customize::before { background-position: -784px -50px; }
+
+.design::before { background-position: -1198px -50px; }
+
+.performance::before { background-position: -1066px -50px; }
+
+.background::before { background-position: -1480px -50px; }
+
+
+.brief-features p { margin: 0 0 30px; }
+
+.brief-features-title {
+  margin: 0 0 10px;
+  font: 700 16px/1.5625 "Raleway", "Arial", sans-serif;
+  color: #323232;
+}
+
+/* ==================================================================
+   Блок features
+   ================================================================== */
+
+
+.feature {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  margin: 0 0 75px 30px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.feature::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -25px;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.feature-title {
+  margin: 90px 0 25px;
+  font: 600 20px/1 "Raleway", "Arial", sans-serif;
+  color: #323232;
+}
+
+.feature-description {
+  margin: 0 auto;
+  font: 400 15px/1.667 "Source Sans Pro", "Arial", sans-serif;
+  max-width: 300px;
+  color: #727272;
+}
+
+.responsive::before { background-position: -634px -50px; }
+
+.icons::before { background-position: -184px -50px; }
+
+.bootstrap::before { background-position: -916px -50px; }
+
+.variations::before { background-position: -1330px -50px; }
+
+.valid::before { background-position: -334px -47px; }
+
+.easy::before { background-position: -484px -50px; }
+
+/* ==================================================================
+   Блок pricing
+   ================================================================== */
+.pricing-offer {
+  display: inline-block;
+  width: 358px;
+  margin: 0 0 75px 30px;
+  vertical-align: top;
+  border: 1px solid #e5e5e5;
+  transition: .4s ease;
+}
+
+.pricing-offer:hover { box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5); }
+
+.pricing-offer:hover .offer-title {
+  background: #0199e6;
+   transition: .4s ease;
+}
+
+.pricing-offer:hover .offer-title  strong {
+  color: #fff;
+  transition: .4s ease;
+}
+
+.pricing-offer:hover .btn-blue {
+  border-color: #0199e6;
+  background: #0199e6;
+  color: #fff;
+  transition: .4s ease;
+}
+
+.offer-title {
+  padding: 25px 0;
+  text-align: center;
+  color: #fff;
+  background: #323232;
+}
+
+.offer-title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.offer-title h3 {
+  margin: 0 0 15px;
+  font: 600 24px/1 "Raleway", "Arial", sans-serif;
+}
+
+.offer-title p {
+  margin: 0;
+  font: 400 16px/1 "Source Sans Pro", "Arial", sans-serif;
+}
+
+.offer-title strong { color: #0199e6; }
+
+.offer-list li {
+  padding:0 35px 0 30px;
+  border-bottom: 1px dashed #e3e3e3;
+  font: 400 16px/3.124 "Source Sans Pro", "Arial", sans-serif;
+  color: #323232;
+}
+.offer-list li span:first-child { float: left;}
+
+.offer-list li span:last-child { float: right;}
+
+.offer-list li:last-child {
+  font: 700 18px/4.167 "Raleway", "Arial", sans-serif;
+  border: none;
+}
+
+.offer-list .btn-blue {
+  float: right;
+  margin: 18px 0 0;
+  min-width: 94px;
+  border: 1px solid #727272;
+  color: #727272;
+  background: none;
+  line-height: 1.2;
+}
+
+/* ==================================================================
+   Блок video
+   ================================================================== */
+.video-player {
+  width: 945px;
+  height: 531px;
+  margin: 0 auto 45px;
+  background: #f4f2f3 url("../img/video.jpg") no-repeat center;
+}
+
+.video-player iframe {
+  width: 945px;
+  height: 531px;
+}
+
+.video-features {
+  width: 945px;
+  margin: 0 auto;
+}
+
+.video-features div {
+  float: left;
+  width: 315px;
+  font: 700 18px/1 "Raleway", "Arial", sans-serif;
+  text-align: center;
+}
+
+.video-features i {
+  margin: 0 15px 0 0;
+  color: #0199e6;
+}
+
+/* ==================================================================
+   Слайдер
+   ================================================================== */
+.slider {
+  position: relative;
+  width: 1140px;
+  height: 300px;
+}
+
+.slider [type="radio"] { display: none;}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide .row { margin: 0 0 0 -30px; }
+
+.slider-image {
+  float: left;
+  margin: 0 0 0 30px;
+  width: 360px;
+  height: 246px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  left: 50%;
+  width: 200px;
+  height: 14px;
+  margin: 0 0 0 -100px;
+  text-align: center;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 13px;
+  height: 14px;
+  margin: 0 12px 0 0;
+  vertical-align: top;
+  background: #94cae6;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@-webkit-keyframes fade-in {
+0% { opacity: 0; }
+20% { opacity: 0.1; }
+40% { opacity: 0.3; }
+60% { opacity: 0.5; }
+80% { opacity: 0.9; }
+100% { opacity: 1; }
+}
+
+@keyframes fade-in {
+0% { opacity: 0; }
+20% { opacity: 0.1; }
+40% { opacity: 0.3; }
+60% { opacity: 0.5; }
+80% { opacity: 0.9; }
+100% { opacity: 1; }
+}
+
+#btn-1:checked ~ .slider-controls [for="btn-1"],
+#btn-2:checked ~ .slider-controls [for="btn-2"],
+#btn-3:checked ~ .slider-controls [for="btn-3"] { background: #0199e6; }
+
+#btn-1:checked ~ .slides .slide:nth-child(1),
+#btn-2:checked ~ .slides .slide:nth-child(2),
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+   display: block;
+   -webkit-animation: fade-in .6s;
+           animation: fade-in .6s;
+}
+
+/* ==================================================================
+   Блок testimonials
+   ================================================================== */
+.testimonials-clients {
+  margin: 0 auto;
+  width: 780px;
+  height: 45px;
+}
+
+.testimonials-clients a {
+  display: block;
+  float:left;
+  width: 195px;
+  height: 100%;
+  background: url("../img/sprite.png") no-repeat;
+}
+
+.testimonials-clients .vogue { background-position: -2260px -45px; }
+
+.testimonials-clients .mashable { background-position: -1590px -40px; }
+
+.testimonials-clients .tnw { background-position: -2060px -45px; }
+
+.testimonials-clients .national { background-position: -1845px -48px; }
+
+.testimonial {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  margin: 100px 0 75px 30px;
+  font: italic 400 16px/1.5625 "Source Sans Pro", "Arial", sans-serif;
+  text-align: center;
+  color: #727272;
+}
+
+.testimonial .quote {
+  position: absolute;
+  z-index: 10;
+  top: -20px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0 0 0 -20px;
+  padding: 3px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.testimonial .icon-quote-left {
+  display: block;
+  font-size: 10px;
+  width: 32px;
+  line-height: 3.2;
+  color: #fff;
+  border-radius: 3px;
+  background: #0199e6;
+}
+
+.testimonial blockquote {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 50px 35px 30px;
+  border-bottom: 2px solid #e5e5e5;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.testimonial blockquote::after {
+  position: absolute;
+  content: "";
+  bottom:-12px;
+  left: 50%;
+  margin: 0 0 0 -10px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-bottom: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+  background: #f7f8fa;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  font-style: normal;
+  color: #0199e6;
+}
+
+.testimonial-company {
+  font-size: 13px;
+  font-style: normal;
+}
+
+/* ==================================================================
+   Блок registration
+   ================================================================== */
+.registration {
+  padding: 140px 0 130px;
+  font: 700 20px/1 "Raleway", "Arial", sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #020302 url("../img/registration-bg.jpg") no-repeat center;
+}
+
+.registration p { margin: 0 0 30px; }
+
+.registration h3 {
+  font-size: 35px;
+  margin: 0 0 50px;
+}
+
+.registration .btn-blue {
+  padding: 12px 10px;
+  width: 183px;
+}
+
+.registration .icon-right { margin: 0 0 0 12px;}
+
+/* ==================================================================
+   Блок contact-us
+   ================================================================== */
+.contact-us {
+  padding: 80px 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: 1;
+  text-align: center;
+}
+
+.contact-us p {
+  margin: 0 0 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #323232;
+}
+
+.contact-us a {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0199e6;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.contact-us a:hover { text-decoration: underline; }
+
+.contact-us .icon-mail { margin: 0 10px 0 0; }
+
+/* ==================================================================
+   Футер
+   ================================================================== */
+.main-footer {
+  text-align: center;
+  padding: 77px 0 100px;
+}
+
+.main-footer .logo { margin: 0 auto 20px; }
+
+.footer-copyright { margin: 0 0 15px; }
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  background: #919191;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.footer-social a:hover { background: #aaa8a8; }

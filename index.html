@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<!--[if IE 9]> <html lang="ru" class="ie9"> <![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +16,11 @@
     <h1 class="header__title">Андрей Бондарь</h1>
     <p class="header__description">HTML-верстальщик</p>
     <div class="social">
-      <a href="#" class="social__link"><i class="icon-vkontakte"></i></a>
-      <a href="#" class="social__link"><i class="icon-github-circled"></i></a>
+      <a href="http://vk.com/bondar_a" class="social__link" target="_blank"><i class="icon-vkontakte"></i></a>
+      <a href="http://github.com/a-bondar" class="social__link" target="_blank"><i class="icon-github-circled"></i></a>
     </div>
     <nav class="navigation">
-      <ul class="navigation__list" data-uk-scrollspy-nav="{closest:'li>a'}">
+      <ul class="navigation__list">
         <li class="navigation__list-item">
           <a  class="navigation__link navigation__link--active" href="#about-me">Обо мне</a>
         </li>
@@ -40,7 +41,7 @@
     <section id="about-me" class="about-me">
       <div class="wrapper-pad">
         <h2 class="about-me__title">Обо мне</h2>
-        <p class="about-me__text">Здравствуйте! Меня зовут Андрей, мне 26 лет. Я занимаюсь html-версткой сайтов. <br>Успешно окончил интенсив от htmlacademy.ru <a href="https://htmlacademy.ru/intensive">"Создание веб-интерфейсов с помощью HTML и CSS"</a>. Имеется <a href="https://drive.google.com/file/d/0B3JpY1In1_SlZjhZcEZYcjNZVEk/view?usp=sharing">сертификат</a>.<br> В своей работе я использую редактор Atom с расширением Emmet, препроцессор Sass, автоматизирую процесс с помощью Grunt.<br> С примерами моих работ Вы можете ознакомиться ниже.</p>
+        <p class="about-me__text">Здравствуйте! Меня зовут Андрей, мне 26 лет. Я занимаюсь html-версткой сайтов. <br>Успешно окончил интенсив от htmlacademy.ru <a href="https://htmlacademy.ru/intensive" target="_blank">"Создание веб-интерфейсов с помощью HTML и CSS"</a>. Имеется <a href="https://drive.google.com/file/d/0B3JpY1In1_SlZjhZcEZYcjNZVEk/view?usp=sharing" target="_blank">сертификат</a>.<br> В своей работе я использую редактор Atom с расширением Emmet, препроцессор Sass, автоматизирую процесс с помощью Grunt.<br> С примерами моих работ Вы можете ознакомиться ниже.</p>
       </div>
     </section>
 
@@ -62,25 +63,32 @@
     <section id="portfolio" class="portfolio">
       <div class="wrapper-pad">
         <h2 class="portfolio__title">Портфолио</h2>
+        <input id="portfolio--all" type="radio" checked name="portfolio-filter">
+        <input id="portfolio--static" type="radio" name="portfolio-filter">
+        <input id="portfolio--adaptive" type="radio" name="portfolio-filter">
+        <div class="portfolio__filter">
+          <label for="portfolio--all" class="btn btn--one-third-width">Все</label>
+          <label for="portfolio--static" class="btn btn--one-third-width">Статичные</label>
+          <label for="portfolio--adaptive" class="btn btn--one-third-width">Адаптивные</label>
+        </div>
         <div class="portfolio__catalog">
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--adaptive">
             <img src="img/sedona.jpg" alt="Sedona">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">Sedona</h3>
               <ul class="portfolio-item__features">
                 <li>2 страницы</li>
                 <li>IE9+</li>
-                <li>Progressive enhancement</li>
                 <li>Adaptive</li>
                 <li>JS</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/sedona/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/sedona" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--static">
             <img src="img/barbershop.jpg" alt="Barbershop">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">Barbershop</h3>
@@ -91,12 +99,12 @@
                 <li>JS</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="http://a-bondar.github.io/portfolio/barbershop/" target="_blank">Открыть</a>
-                <a class="btn btn--full-width" href="https://github.com/a-bondar/barbershop" target="_blank">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/barbershop/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/barbershop" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--static">
             <img src="img/technomart.jpg" alt="Technomart">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">Technomart</h3>
@@ -107,61 +115,61 @@
                 <li>JS</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/technomart/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/technomart" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--static">
             <img src="img/nerds.jpg" alt="Nerds">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">Nerds</h3>
               <ul class="portfolio-item__features">
                 <li>2 страницы</li>
                 <li>IE9+</li>
-                <li>Progressive enhancement</li>
                 <li>Static</li>
                 <li>JS</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/nerds/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/nerds" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="img/starnight.jpg" alt="Sedona">
+          <div class="portfolio-item portfolio-item--all portfolio-item--static">
+            <img src="img/starnight.jpg" alt="Starnight">
             <div class="portfolio-item__preview">
-              <h3 class="portfolio-item__title">Starlight</h3>
+              <h3 class="portfolio-item__title">Starnight</h3>
               <ul class="portfolio-item__features">
                 <li>1 страница</li>
                 <li>IE9+</li>
                 <li>Static</li>
-                <li>JQuery (Owl Carousel)</li>
+                <li>Sass</li>
+                <li>JS, JQuery (Owl Carousel)</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/starnight/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/starnight" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--adaptive">
             <img src="img/pex.jpg" alt="Pex">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">Pex</h3>
               <ul class="portfolio-item__features">
                 <li>1 страница</li>
                 <li>IE9+</li>
-                <li>SASS</li>
                 <li>Adaptive</li>
+                <li>Sass</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/pex/index.html">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/pex" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
-          <div class="portfolio-item">
+          <div class="portfolio-item portfolio-item--all portfolio-item--static">
             <img src="img/landX.jpg" alt="landX">
             <div class="portfolio-item__preview">
               <h3 class="portfolio-item__title">LandX</h3>
@@ -171,8 +179,8 @@
                 <li>Static</li>
               </ul>
               <div class="portfolio-item__links">
-                <a class="btn btn--full-width" href="#">Открыть</a>
-                <a class="btn btn--full-width" href="#">GitHub</a>
+                <a class="btn btn--full-width" href="/portfolio/landX/index.html" target="_blank">Открыть</a>
+                <a class="btn btn--full-width" href="https://github.com/a-bondar/a-bondar.github.io/tree/master/portfolio/landX" target="_blank">GitHub</a>
               </div>
             </div>
           </div>
@@ -188,7 +196,7 @@
           <li class="contacts__item contacts__item--email">a.y.bondar@gmail.com</li>
           <li class="contacts__item contacts__item--skype">a.y.bondar@live.com</li>
         </ul>
-        <form action="/echo" method="post" class="contacts__form">
+        <form action="//formspree.io/a.y.bondar@gmail.com" method="POST" class="contacts__form">
           <input id="user-name" name="user-name" type="text" placeholder="Ваше имя" required>
           <textarea name="user-text" id="user-text" placeholder="Ваше сообщение" required></textarea>
           <div class="contacts__buttons">
@@ -200,7 +208,9 @@
     </section>
   </div>
 
-  <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/script.js"></script>
+  <!-- IE polyfills -->
+  <script src="js/classList.js"></script>
+  <script src="js/placeholders-min.js"></script>
 </body>
 </html>

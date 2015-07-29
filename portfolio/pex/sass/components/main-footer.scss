@@ -1,0 +1,35 @@
+.main-footer {
+  padding: 60px 0;
+  background: $darkblue;
+
+  &__social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 0;
+  }
+
+  &__social-item {
+    display: inline-block;
+    margin: 20px;
+
+    a {
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--twitter {
+      background: url("../img/sprite.png")  no-repeat -10px -136px;
+    }
+
+    &--facebook {
+      background: url("../img/sprite.png") no-repeat -10px -10px;
+    }
+
+    &--youtube {
+      background: url("../img/sprite.png") no-repeat -10px -206px;
+    }
+  }
+}

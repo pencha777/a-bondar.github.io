@@ -1,0 +1,39 @@
+.promo-header {
+  padding: 150px 0 65px;
+  text-align: center;
+  background: $orange url("../img/bg-header.jpg") no-repeat center;
+  background-size: cover;
+
+    &__title {
+      margin: 0 0 25px;
+      font-size: $font-size--h1;
+      line-height: $line-height-h1;
+      font-weight: $weight-light;
+      color: $white;
+    }
+
+    &__text {
+      width: 740px;
+      margin: 0 auto 75px;
+      font-size: ($font-size-base + 1);
+      color: $gray-light;
+    }
+
+    &__play {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 261px;
+      border: 10px solid $white;
+      border-radius: 50%;
+      background: url("../img/icon-play.png") no-repeat center;
+
+        &:hover {
+          border-color: lighten($purple, 20%);
+        }
+
+        &:active {
+          border-color: $purple;
+        }
+    }
+}

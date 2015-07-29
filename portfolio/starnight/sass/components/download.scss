@@ -1,0 +1,32 @@
+.download {
+  position: relative;
+  padding: 85px 0 183px;
+  background: $orange url("../img/bg-download.png") no-repeat 593px 340px;
+
+  &__overview {
+    width: 700px;
+    // padding: 0 480px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 33px;
+    font-size: $font-size--h2;
+    font-weight: $weight-light;
+    line-height: 1;
+    color: $white;
+  }
+
+  &__text {
+    margin: 0 0 32px;
+    color: $white;
+  }
+
+  &__ipad {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 472px;
+    height: 700px;
+    background: url("../img/bg-ipad.jpg") no-repeat 0% 0%;
+  }
+}

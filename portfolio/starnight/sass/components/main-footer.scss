@@ -1,0 +1,65 @@
+.main-footer {
+  padding: 60px 0 240px;
+  background: $purple;
+
+    .inner {
+      @extend %clearfix;
+    }
+
+    &__text {
+      float: left;
+      width: 400px;
+      margin: 0 20px 60px 0;
+      font-size: $font-size-small;
+      line-height: $line-height-sm;
+      color: $white;
+    }
+
+    &__design {
+      font-size: 12px;
+      line-height: 2;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+
+      a:hover,
+      a:active {
+        color: $orange
+      }
+    }
+}
+
+.main-nav {
+  float: right;
+  width: 120px;
+  overflow: hidden;
+
+    &__item {
+      font-size: $font-size-small;
+      margin: 0 0 5px;
+
+        a:hover {
+          color: $orange;
+        }
+
+        a:active {
+          color: darken($orange, 20%);
+        }
+    }
+
+    &__item--active {
+      a,
+      a:hover{
+        color: $red;
+      }
+    }
+}
+
+.logo {
+  display: block;
+  width: 60px;
+  height: 62px;
+  margin: 0 auto 75px;
+  clear: both;
+}

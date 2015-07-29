@@ -1,0 +1,41 @@
+//font-family
+$font-family-base: "Lato", "Arial", sans-serif;
+
+//font-size
+$font-size-base: 16px;
+$font-size-small: 14px;
+
+$font-size--h1: 60px;
+$font-size--h2: 55px;
+$font-size--h3: 45px;
+$font-size--h4: 15px;
+
+$font-size-owl--text: 43px;
+
+$font-size-btn--big: 22px;
+$font-size-btn: 18px;
+
+//line-height
+$line-height-base: 30px;
+$line-height-h1: ($line-height-base + 18);
+$line-height-sm: ($line-height-base - 6);
+$line-height-btn: ($line-height-base - 8);
+
+//bold
+$weight-light: 300;
+$weight-regular: 400;
+$weight-bold: 700;
+
+//colors
+$gray-dark: #7a8387; //text
+$gray: #9197a8; //h4
+$gray-light: #abbcc3; //h3
+$white: #fff;
+
+$purple: #7accc8;
+$orange: #e8b968;
+$red: #f69679;
+
+$text-color: $gray-dark;
+$h3-color: $gray-light;
+$h4-color: $gray;

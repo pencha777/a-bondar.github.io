@@ -1,0 +1,84 @@
+.review {
+  position: relative;
+
+  .inner {
+    @include breakpoint(middle) {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    width: calc-percent(630, 1600);
+    height: 100%;
+
+    @include breakpoint(middle) {
+      z-index: 2;
+      width: 100%;
+    }
+
+    &--left {
+      left: 0;
+      background: url("../img/bg-review-1.jpg") no-repeat 0 0 / cover;
+    }
+
+    &--right {
+      right: 0;
+      background: url("../img/bg-review-2.jpg") no-repeat 0 0 / cover;
+    }
+  }
+
+  &__text {
+    width: calc-percent(660, $container);
+    background: $white;
+    color: $darkgray;
+
+    &--right {
+      margin-left: calc-percent(420, $container);
+      padding: 90px 0 125px calc-percent(100, $container);
+
+      @include breakpoint(middle) {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        padding: 80px 2%;
+        width: 96%;
+        background: rgba(255,255,255,.8);
+      }
+    }
+
+    &--left {
+      margin-right: calc-percent(420, $container);
+      padding: 90px calc-percent(100, $container) 125px 0;
+
+      @include breakpoint(middle) {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        padding: 80px 2%;
+        width: 96%;
+        background: rgba(255,255,255,.8);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    color: $darkgray;
+    text-transform: uppercase;
+    font-size: $font-size-h3;
+    line-height: 1.7333;
+  }
+
+  &__descr {
+    margin: 0 0 25px;
+
+    @include font-size(19px);
+
+    &--small {
+      font-size: $font-size-base;
+      line-height: 1.7333;
+    }
+  }
+}

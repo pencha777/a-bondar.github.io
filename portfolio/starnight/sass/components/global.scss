@@ -1,0 +1,85 @@
+body {
+  min-width: 1200px;
+  font: $weight-regular #{$font-size-base}/#{$line-height-base} $font-family-base;
+  color: $text-color;
+}
+
+.inner {
+  width: 1180px;
+  padding: 0 10px;
+  @extend %block-center;
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  @extend %transition;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  vertical-align: top;
+  font: $weight-bold #{$font-size-btn--big}/#{$line-height-btn} $font-family-base;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  @extend %transition;
+    //button "Get Started"
+    &--started {
+      min-width: 280px;
+      background: $purple;
+
+        &:hover {
+          background: darken($purple, 15%);
+        }
+
+        &:active {
+          background: darken($purple, 25%);
+        }
+    }
+    //button "Download"
+    &--download {
+      min-width: 280px;
+      font-size: $font-size-btn;
+      border: 3px solid $white;
+
+        &:hover {
+          background: darken($orange, 15%);
+        }
+
+        &:active {
+          background: darken($orange, 25%);
+        }
+    }
+    //button "Try Demo"
+    &--try {
+      min-width: 180px;
+      font-size: $font-size-btn;
+      background: $red;
+
+
+        &:hover {
+          background: darken($red, 15%);
+        }
+
+        &:active {
+          background: darken($red, 25%);
+        }
+    }
+}

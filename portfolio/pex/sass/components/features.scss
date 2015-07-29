@@ -1,0 +1,59 @@
+.features {
+  position: relative;
+  padding: 70px 0 100px;
+  background: $darkblue;
+  font-size: 0;
+
+  @include breakpoint(middle) {
+    padding: 70px 0 40px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -60px;
+    width: 121px;
+    height: 35px;
+    background: url("../img/decorate.png") no-repeat center;
+    content: "";
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 4% 60px 0;
+    width: 48%;
+    vertical-align: top;
+    font-size: 15px;
+    font-family: $font-family-base;
+    line-height: 1.733;
+
+    @include breakpoint(middle) {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 25px;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    margin: 0 0 20px;
+    width: 100%;
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

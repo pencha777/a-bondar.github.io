@@ -1,0 +1,24 @@
+// Normalize.css
+@import "components/vendor/normalize";
+//Var
+@import "variables";
+//owl-carousel
+@import "components/vendor/owl-carousel.scss";
+//placeholders
+@import "components/placeholders";
+//global styles
+@import "components/global";
+//styles for .main-header
+@import "components/main-header";
+//styles for .download
+@import "components/download";
+//styles for .slider
+@import "components/slider";
+//styles for .demo
+@import "components/demo.scss";
+//styles for .preview
+@import "components/preview";
+//styles for .main-footer
+@import "components/main-footer";
+//styles for .modal-content
+@import "components/modal-content";

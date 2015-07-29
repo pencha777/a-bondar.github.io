@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!--[if IE]> <html lang="ru" class="ie"> <![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:500&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize-minimized.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nerds - Магазин</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="main-menu clearfix">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo.png" width="139" height="56" alt="Nerds">
+            </a>
+          </div>
+          <nav class="main-navigation">
+            <ul>
+              <li>
+                <a href="index.html">Студия</a>
+              </li>
+              <li class="disabled">
+                <a href="#">Клиенты</a>
+              </li>
+              <li  class="active">
+                <a href="#">Магазин</a>
+              </li>
+              <li class="disabled">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="disabled">
+                <a href="#"><i class="icon-basket"></i>Корзина</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <h1 class="main-header-title">Добро пожаловать в магазин готовых макетов</h1>
+      </div>
+    </header>
+
+    <div class="container clearfix">
+      <form class="filters" action="/echo" method="post">
+        <fieldset class="range-filter">
+          <legend>Стоимость:</legend>
+          <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="width:70%"></div>
+              </div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+          </div>
+          <div class="price-controls clearfix">
+            <label for="min-price">от</label>
+            <input class="min-price" id="min-price" name="min-price"  type="text" value="0">
+            <label for="max-price">до</label>
+            <input class="max-price" id="max-price" name="max-price"  type="text" value="15 000">
+          </div>
+        </fieldset>
+        <fieldset class="grid-filter">
+          <legend>Сетка:</legend>
+          <input id="adaptive" name="grid" value="adaptive-grid" type="radio" checked disabled>
+          <label for="adaptive">Адаптивная</label>
+          <input id="fixed" name="grid" value="fixed-grid" type="radio">
+          <label for="fixed">Фиксированная</label>
+          <input id="stretch" name="grid" value="stretch-grid" type="radio">
+          <label for="stretch">Резиновая</label>
+        </fieldset>
+        <fieldset class="features-filter">
+          <legend>Особенности:</legend>
+          <input id="slider" name="slider" type="checkbox" value ="1" checked disabled>
+          <label for="slider">Слайдер</label>
+          <input id="benefits" name="benefits" type="checkbox" value ="2">
+          <label for="benefits">Блок преимуществ</label>
+          <input id="news" name="news" type="checkbox" value ="3" checked>
+          <label for="news">Новости</label>
+          <input id="gallery" name="gallery" type="checkbox" value ="4">
+          <label for="gallery">Галерея</label>
+          <input id="basket" name="basket" type="checkbox" value ="5">
+          <label for="basket">Корзина</label>
+        </fieldset>
+        <input type="submit" class="btn btn-grey" value="Показать">
+      </form>
+
+      <section class="layouts">
+        <div class="layouts-sort clearfix">
+          <div class="layouts-sort-by clearfix">
+            <p>Сортировать:</p>
+            <ul>
+              <li>
+                <a class="active" href="#">По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По функционалу</a>
+              </li>
+            </ul>
+          </div>
+          <div class="layouts-sort-direction">
+            <a class="active" href="#">
+              <i class="icon-down-dir"></i>
+            </a>
+            <a href="#">
+              <i class="icon-up-dir"></i>
+            </a>
+          </div>
+        </div>
+        <section class="layouts-view clearfix">
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-aviator.jpg"  width="240" height="240" alt="Aviator">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-sunset.jpg" width="240" height="240" alt="Sunset">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-forte.jpg" width="240" height="240" alt="Forte">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-modern.jpg" width="240" height="240" alt="Marquee">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-avenue.jpg" width="240" height="240" alt="Avenue">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+          <article class="layout">
+            <div class="layout-circle">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="layout-preview">
+              <a href="#">
+                <img src="img/layout-dovetaul.jpg" width="240" height="240" alt="Dovetail">
+              </a>
+            </div>
+            <div class="layout-details">
+              <h2>
+                <a href="#">Sunset</a>
+              </h2>
+              <p>Интернет-магазин с личным кабинетом</p>
+              <a class="btn btn-red" href="#">10 000 р.</a>
+            </div>
+          </article>
+        </section>
+        <div class="paginator">
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Следующая</a>
+       </div>
+      </section>
+    </div><!-- end of .container -->
+
+    <section class="map">
+      <div id="yandex-map"></div>
+      <div class="container">
+        <div class="contacts">
+          <h3><strong>NЁRDS</strong> DESIGN STUDIO</h3>
+          <p>
+            191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8
+          </p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn btn-red write-us-open" href="write-us.html">Напишите нам</a>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="main-footer clearfix">
+      <div class="container clearfix">
+        <section class="footer-social">
+          <a href="#" class="social-btn social-btn-vk">
+            <i class="icon-vk"></i>
+          </a>
+          <a href="#" class="social-btn social-btn-fb">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="#" class="social-btn social-btn-inst">
+            <i class="icon-instagramm"></i>
+          </a>
+        </section>
+        <section class="footer-friends">
+          <h2 class="title">Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </section>
+      </div>
+    </footer>
+
+    <form class="modal-write-us" action="/echo"  method="post">
+      <div class="write-us-close"></div>
+      <fieldset class="half-width">
+        <label for="user-name">Ваше имя:</label>
+        <input id="user-name" name="user-name" type="text" placeholder="Представьтесь, пожалуйста" required>
+      </fieldset>
+      <fieldset class="half-width">
+        <label for="user-email">Ваш e-mail:</label>
+        <input id="user-email" name="user-email" type="email" placeholder="Для отправки ответа" required>
+      </fieldset>
+      <fieldset>
+        <label for="user-text">Текст письма:</label>
+        <textarea id="user-text" name="user-text" rows="4" cols="30" placeholder="В свободной форме:" required></textarea>
+      </fieldset>
+      <div class="write-us-buttons clearfix">
+        <input class="btn btn-red" type="submit" value="Отправить">
+        <input class="btn btn-grey" name="reset" type="reset" value="Отмена">
+      </div>
+    </form>
+
+    <script src="js/script.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=DZUEREowKbuYQrZDfrTaz-NfHL7YZn-z&amp;id=yandex-map"></script>
+    <!-- IE polyfills -->
+    <script src="js/classList.js"></script>
+    <script src="js/placeholders-min.js"></script>
+  </body>
+</html>

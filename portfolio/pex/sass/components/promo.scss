@@ -1,0 +1,27 @@
+.promo {
+  padding: 130px 0 190px;
+  background: url("../img/bg-promo.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+
+  @include breakpoint(middle) {
+    padding: 100px 0;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: $font-size-h2;
+    line-height: 1.7142;
+  }
+
+  &__text {
+    margin: 0 auto 30px;
+    width: calc-percent(550, $container);
+    font-size: $font-size-base;
+
+    @include breakpoint(middle) {
+      width: 80%;
+    }
+  }
+}

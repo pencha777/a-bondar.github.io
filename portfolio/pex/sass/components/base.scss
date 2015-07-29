@@ -1,0 +1,125 @@
+html {
+  font-size: $html-size-base;
+}
+
+body {
+  min-width: 320px;
+  color: $text-color;
+  font: 400 #{$font-size-base}/#{$line-height-base} $font-family-base;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 1180px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  border: 2px solid $white;
+  border-radius: 5px;
+  background: none;
+  color: $white;
+  font: 400 #{$font-size-base}/#{$line-height-base} $font-family-base;
+  font-size: 1.5rem;//ie9-10 fallback
+
+  @include placeholder {
+    color: $white;
+    opacity: 1;
+  }
+  @include trans;
+
+  &:hover {
+    border-color: lighten($violet, 25%);
+  }
+
+  &:focus {
+    border-color: lighten($violet, 15%);
+  }
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  outline: none;
+  border: none;
+  border-radius: 27px;
+  color: $white;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  font: 700 #{$font-size-btn}/1 $font-family-base;
+  font-size: 1.8rem;//ie910 fallback
+
+  @include trans;
+
+  &--small {
+    padding: 10px 10px;
+    width: 135px;
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: $font-size-btn--small;
+  }
+
+  &--mid {
+    width: 280px;
+  }
+
+  &--large {
+    width: 340px;
+  }
+
+  &--width-full {
+    width: 100%;
+  }
+
+  &--border-white {
+    border: 2px solid $white;
+  }
+
+  &--violet {
+    background: $violet;
+
+    &:hover {
+      background: darken($violet, 10%);
+    }
+
+    &:active {
+      background: darken($violet, 20%);
+    }
+  }
+
+  &--transparent {
+    background: none;
+
+    &:hover {
+      background: rgba(255, 255, 255, .4);
+      color: #000;
+    }
+
+    &:active {
+      background: darken($white, 15%);
+    }
+  }
+
+  &--white {
+    background: $white;
+
+    &:hover {
+      background: darken($white, 10%);
+    }
+
+    &:active {
+      background: darken($white, 25%);
+    }
+  }
+
+  &--text-pink {
+    color: $pink;
+  }
+}

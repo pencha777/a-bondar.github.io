@@ -1,0 +1,33 @@
+.experience {
+  padding: 90px 0 110px;
+  background: #754885 url("../img/bg-experience.jpg") no-repeat fixed center;
+  background-size: cover;
+  text-align: center;
+
+  background-blend-mode: soft-light;
+
+  &__title {
+    margin: 0 0 25px;
+    font-weight: 400;
+    font-size: $font-size-h2;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    margin: 0 auto 15px;
+    width: calc-percent(740, $container);
+    color: #a87bb7;
+    line-height: 1.65;
+
+    @include font-size(20px);
+    @include breakpoint(middle) {
+      width: 100%;
+    }
+  }
+
+  &__notice {
+    margin: 20px 0 0;
+    font-size: $font-size-small;
+    line-height: 1.4166666667;
+  }
+}

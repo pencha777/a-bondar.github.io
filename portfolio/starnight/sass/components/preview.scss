@@ -1,0 +1,72 @@
+.preview {
+  padding: 110px 0 160px;
+  background: #f6f6f4;
+  @extend %clearfix;
+
+    &__left {
+      float: left;
+      width: 700px;
+      font-size: 0;
+    }
+
+    &__right {
+      float: right;
+      width: 445px;
+    }
+
+    &__title {
+      margin: 0 0 15px;
+      font-size: $font-size--h3;
+      line-height: 1;
+      font-weight: $weight-light;
+      color: $h3-color;
+    }
+
+    &__text {
+      color: $gray-light;
+    }
+}
+
+.app {
+  display: inline-block;
+  width: 340px;
+  margin: 0 20px 0 0;
+  background: $white;
+  border-bottom: 3px solid #eaeaea;
+  @extend %transition;
+
+    &:hover {
+      box-shadow: 0px 10px 25px rgba(41, 52, 73, 0.5);
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__image {
+      width: 340px;
+      height: 346px;
+      background: $red;
+
+        img {
+          @extend %img;
+        }
+    }
+
+    &__descr-box {
+      padding: 25px 40px 60px;
+    }
+
+    &__title {
+      margin: 0 0 15px;
+      font-size: $font-size--h4;
+      line-height: 1;
+      color: $h4-color;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    &__descr {
+      font: italic $weight-regular #{$font-size-base}/#{$line-height-base} $font-family-base;
+    }
+}
