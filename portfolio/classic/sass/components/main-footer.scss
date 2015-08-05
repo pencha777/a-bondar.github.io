@@ -1,0 +1,149 @@
+.main-footer {
+  padding: 80px 0;
+  background: $black;
+
+  @include breakpoint(middle) {
+    text-align: center;
+  }
+
+  .inner {
+    @include clearfix;
+  }
+
+  &__about,
+  &__tags,
+  &__recent,
+  &__categories {
+    float: left;
+    margin-right: calc-percent(30, 1170);
+    width: calc-percent(270, 1170);
+
+    @include breakpoint(middle) {
+      float: none;
+      margin: 0 0 50px;
+      width: 100%;
+    }
+  }
+
+  &__about-title {
+    margin: 0 0 30px;
+  }
+
+  &__about-text {
+    margin: 0 0 35px;
+  }
+
+  &__social {
+    font-size: 0;
+  }
+
+  &__social-link {
+    display: inline-block;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $gray;
+    vertical-align: top;
+    text-align: center;
+
+
+    .fa {
+      color: $gray;
+      font-size: 2rem;
+      line-height: 34px;
+
+      @include trans;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__tags {
+    &-title {
+      margin: 0 0 30px;
+    }
+
+    &-btns {
+      font-size: 0;
+    }
+
+    .btn {
+      margin: 0 5px 10px 0;
+      padding: 10px 15px;
+      border: 1px solid $gray;
+    }
+  }
+
+  &__recent {
+    &-title {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__categories {
+    float: right;
+    margin: 0;
+
+    &-title {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.post {
+  margin: 0 0 15px;
+
+  @include clearfix;
+  @include breakpoint(middle) {
+    margin: 0 auto 15px;
+    width: 270px;
+  }
+
+  &__image {
+    float: left;
+    max-height: 56px;
+    width: calc-percent(80, 270);
+  }
+
+  &__text {
+    float: right;
+    width: calc-percent(175, 270);
+  }
+
+  &__title {
+    margin: 0 0 5px;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.second-nav {
+  &__item {
+    border-bottom: 1px solid $gray;
+
+    @include breakpoint(middle) {
+      text-align: center;
+    }
+
+    a {
+      display: block;
+      padding: 15px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:first-child a {
+      padding: 0 0 15px;
+    }
+  }
+}

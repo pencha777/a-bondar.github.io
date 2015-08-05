@@ -1,0 +1,10 @@
+//px2%
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+//px2rem
+@function calculateRem($size) {
+  $remSize: $size / $html-size-base;
+  @return $remSize * 1rem;
+}

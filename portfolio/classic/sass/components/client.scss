@@ -1,0 +1,42 @@
+.client {
+  margin: 0 0 80px;
+  padding: 80px 0;
+  text-align: center;
+
+  .no-js & {
+    background: url("../img/bg-client.jpg") no-repeat center / cover;
+  }
+
+  &__title {
+    margin: 0 auto 80px;
+    width: 230px;
+    color: #fff;
+
+    @include line(#fff, 35px, 10px);
+  }
+
+  &__testimonial {
+    position: relative;
+    margin: 0 auto 65px;
+    width: 730px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.875;
+
+    @include breakpoint(middle) {
+      width: 80%;
+    }
+
+    span {
+      color: $green;
+      font-size: 3rem;
+      line-height: .5;
+    }
+  }
+
+  &__name {
+    color: $green;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+}

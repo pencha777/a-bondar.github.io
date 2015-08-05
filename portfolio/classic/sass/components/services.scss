@@ -1,0 +1,68 @@
+.services {
+  margin: 0 0 80px;
+
+  &__title {
+    margin: 0 0 80px;
+
+    @include line;
+  }
+
+  &__box {
+    margin-left: -(calc-percent(30, 1170));
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d5d5d5;
+    font-size: 0;
+
+    @include breakpoint(large) {
+      margin-left: -2%;
+    }
+    @include breakpoint(middle) {
+      margin-left: 0;
+    }
+  }
+}
+
+.service {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 0 55px calc-percent(30, 1200);
+  padding-left: 100px;
+  width: calc-percent(370, 1200);
+  vertical-align: top;
+
+  @include breakpoint(large) {
+    margin-left: 2%;
+    width: 48%;
+  }
+  @include breakpoint(middle) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  &--responsive {
+    background: url("../img/sprite.png") no-repeat -50px -769px;
+  }
+  &--cloud {
+    background: url("../img/sprite.png") no-repeat -60px -226px;
+  }
+  &--idea {
+    background: url("../img/sprite.png") no-repeat -45px -579px;
+  }
+  &--attachment {
+    background: url("../img/sprite.png") no-repeat -60px -60px;
+  }
+  &--video {
+    background: url("../img/sprite.png") no-repeat -60px -959px;
+  }
+  &--design {
+    background: url("../img/sprite.png") no-repeat -60px -397px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    font-size: $font-size-base;
+  }
+}

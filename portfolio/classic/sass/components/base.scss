@@ -1,0 +1,128 @@
+html {
+  font-size: $html-size-base;
+}
+
+body {
+  min-width: 320px;
+  color: $text-color;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  position: relative;
+  color: $headings-color;
+  font-size: $font-size-h2;
+}
+
+h3 {
+  color: $headings-color;
+  font-size: $font-size-h3;
+}
+
+h4 {
+  color: #fff;
+  font-size: $font-size-h4;
+}
+
+h5 {
+  color: #fff;
+  font-size: $font-size-h5;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 1170px;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 15px 15px;
+  outline: none;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: $font-size-base;
+  cursor: pointer;
+
+  @include trans;
+
+  &:hover {
+    background: rgba(255, 255, 255, .2);
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, .4);
+  }
+
+  &--filter {
+    padding: 10px 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    color: $text-color;
+    text-transform: none;
+
+    &:hover {
+      background: lighten($green, 10%);
+      color: #fff;
+    }
+
+    &:active {
+      background: $green;
+      color: #fff;
+    }
+  }
+
+  &--more {
+    padding: 10px;
+  }
+}

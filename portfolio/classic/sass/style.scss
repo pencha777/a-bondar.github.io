@@ -1,0 +1,21 @@
+//normalize.css
+@import "components/vendor/normalize";
+//owl-carousel
+@import "components/vendor/owl-carousel";
+//mixins
+@import "mixins";
+
+//functions
+@import "functions";
+
+//var
+@import "variables";
+
+//global
+@import "components/base";
+@import "components/main-header";
+@import "components/services";
+@import "components/team";
+@import "components/client";
+@import "components/projects";
+@import "components/main-footer";
