@@ -5,3 +5,4 @@ cookies
 slash
 cash
 mirror
+hash
