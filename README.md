@@ -6,3 +6,4 @@ slash
 cash
 mirror
 hash
+can
