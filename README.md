@@ -7,3 +7,4 @@ cash
 mirror
 hash
 can
+setting
