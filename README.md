@@ -8,3 +8,4 @@ mirror
 hash
 can
 setting
+kick
