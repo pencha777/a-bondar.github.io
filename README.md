@@ -11,3 +11,4 @@ setting
 kick
 gert
 mark
+area
