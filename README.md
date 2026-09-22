@@ -1,15 +1,6 @@
 home
 insert
-injected
-cookies
-slash
-cash
-mirror
-hash
-can
-setting
-kick
-gert
+
 mark
 area
 car
